@@ -13,7 +13,8 @@ $(call inherit-product-if-exists, vendor/xiaomi/sdm710-common/sdm710-common-vend
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(LOCAL_PATH)/overlay
+    $(LOCAL_PATH)/overlay \
+    $(LOCAL_PATH)/overlay-lineage
 
 # Properties
 -include $(LOCAL_PATH)/common-props.mk
@@ -30,9 +31,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
 
-# Camera
-# PRODUCT_PACKAGES += \
-#     Snap
+# Custom Doze
+PRODUCT_PACKAGES += \
+    CustomDoze
 
 # Common init scripts
 PRODUCT_PACKAGES += \
