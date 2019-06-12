@@ -2,7 +2,7 @@ type hal_light_sdm710, coredomain, domain;
 
 # Allow a base set of permissions required for a domain to offer a
 # HAL implementation of the specified type over HwBinder.
-typeattribute hal_light_sdm710 hal_server_domain;
+typeattribute hal_light_sdm710 halserverdomain;
 typeattribute hal_light_sdm710 hal_light_server;
 
 # HwBinder IPC from client to server, and callbacks
