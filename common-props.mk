@@ -18,13 +18,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.bluetooth.soc=cherokee \
-    ro.bluetooth.library_name=libbluetooth_qti.so \
-    persist.vendor.btstack.enable.splita2dp=true \
-    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
-    ro.bluetooth.emb_wp_mode=false \
-    ro.bluetooth.wipower=false \
-    ro.bluetooth.remote.autoconnect=true \
-    ro.bluetooth.request.master=true
+    ro.bluetooth.remote.autoconnect=true
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -107,11 +101,3 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ssr.enable_ramdumps=0 \
     persist.vendor.ssr.restart_level=ALL_ENABLE
 
-# USB
-PRODUCT_PROPERTY_OVERRIDES += \
-    sys.usb.controller=6a00000.dwc3 \
-    persist.vendor.usb.config.extra=none \
-    vendor.usb.dpl.inst.name=dpl \
-    vendor.usb.rmnet.func.name=rmnet_bam \
-    vendor.usb.rmnet.inst.name=rmnet \
-    vendor.usb.rndis.func.name=rndis_bam
