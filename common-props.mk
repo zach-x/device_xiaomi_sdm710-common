@@ -101,3 +101,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ssr.enable_ramdumps=0 \
     persist.vendor.ssr.restart_level=ALL_ENABLE
 
+# TimeService
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.timed.enable=true \
+    persist.delta_time.enable=true
