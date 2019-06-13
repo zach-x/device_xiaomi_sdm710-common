@@ -3,11 +3,28 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.deep_buffer.media=true \
     ro.af.client_heap_size_kbyte=7168 \
     ro.config.media_vol_steps=25 \
-    ro.config.vc_call_vol_steps=7
+    ro.config.vc_call_vol_steps=7 \
+    ro.qc.sdk.audio.ssr=false \
+    ro.qc.sdk.audio.fluencetype=none \
+    persist.audio.fluence.voicecall=true \
+    persist.audio.fluence.voicerec=false \
+    persist.audio.fluence.speaker=true \
+    audio.offload.video=true \
+    audio.offload.buffer.size.kb=32 \
+    tunnel.audio.encode = true \
+    av.offload.enable=true \
+    audio.offload.gapless.enabled=true
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.bluetooth.soc=cherokee
+    vendor.bluetooth.soc=cherokee \
+    ro.bluetooth.library_name=libbluetooth_qti.so \
+    persist.vendor.btstack.enable.splita2dp=true \
+    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac \
+    ro.bluetooth.emb_wp_mode=false \
+    ro.bluetooth.wipower=false \
+    ro.bluetooth.remote.autoconnect=true \
+    ro.bluetooth.request.master=true
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -89,3 +106,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ssr.enable_ramdumps=0 \
     persist.vendor.ssr.restart_level=ALL_ENABLE
+
+# USB
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.usb.controller=6a00000.dwc3 \
+    persist.vendor.usb.config.extra=none \
+    vendor.usb.dpl.inst.name=dpl \
+    vendor.usb.rmnet.func.name=rmnet_bam \
+    vendor.usb.rmnet.inst.name=rmnet \
+    vendor.usb.rndis.func.name=rndis_bam
