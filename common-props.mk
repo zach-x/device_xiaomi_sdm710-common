@@ -3,11 +3,22 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.deep_buffer.media=true \
     ro.af.client_heap_size_kbyte=7168 \
     ro.config.media_vol_steps=25 \
-    ro.config.vc_call_vol_steps=7
+    ro.config.vc_call_vol_steps=7 \
+    ro.qc.sdk.audio.ssr=false \
+    ro.qc.sdk.audio.fluencetype=none \
+    persist.audio.fluence.voicecall=true \
+    persist.audio.fluence.voicerec=false \
+    persist.audio.fluence.speaker=true \
+    audio.offload.video=true \
+    audio.offload.buffer.size.kb=32 \
+    tunnel.audio.encode = true \
+    av.offload.enable=true \
+    audio.offload.gapless.enabled=true
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
-    vendor.bluetooth.soc=cherokee
+    vendor.bluetooth.soc=cherokee \
+    ro.bluetooth.remote.autoconnect=true
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -89,3 +100,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ssr.enable_ramdumps=0 \
     persist.vendor.ssr.restart_level=ALL_ENABLE
+
+# TimeService
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.timed.enable=true \
+    persist.delta_time.enable=true
