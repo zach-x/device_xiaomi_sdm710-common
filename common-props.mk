@@ -4,7 +4,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.af.client_heap_size_kbyte=7168 \
     ro.config.media_vol_steps=25 \
     ro.config.vc_call_vol_steps=7 \
-    use.voice.path.for.pcm.voip=true
+    use.voice.path.for.pcm.voip=true \
+    ro.qc.sdk.audio.ssr=false \
+    ro.qc.sdk.audio.fluencetype=none \
+    persist.audio.fluence.voicecall=true \
+    persist.audio.fluence.voicerec=false \
+    persist.audio.fluence.speaker=true \
+    audio.offload.video=true \
+    tunnel.audio.encode = true \
+    audio.offload.buffer.size.kb=32 \
+    av.offload.enable=true \
+    audio.offload.gapless.enabled=true
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -14,10 +24,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.disable_zsl_mode=true \
-    persist.camera.sat.fallback.dist=45 \
-    persist.camera.sat.fallback.dist.d=5 \
-    persist.camera.sat.fallback.luxindex=405 \
-    persist.camera.sat.fallback.lux.d=20 \
     vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
 
 # CNE and DPM
@@ -41,16 +47,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.display.ad.hdr_calib_data=/vendor/etc/hdr_config.cfg \
     ro.vendor.display.ad.sdr_calib_data=/vendor/etc/sdr_config.cfg \
     ro.vendor.display.sensortype=2
-
-# Display density
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sf.lcd_density=440
-
-# Display features
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.displayfeature.histogram.enable=true \
-    ro.eyecare.brightness.threshold=3 \
-    ro.eyecare.brightness.level=8
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
