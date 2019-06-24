@@ -3,18 +3,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.deep_buffer.media=true \
     ro.af.client_heap_size_kbyte=7168 \
     ro.config.media_vol_steps=25 \
-    ro.config.vc_call_vol_steps=7 \
-    use.voice.path.for.pcm.voip=true \
-    ro.qc.sdk.audio.ssr=false \
-    ro.qc.sdk.audio.fluencetype=none \
-    persist.audio.fluence.voicecall=true \
-    persist.audio.fluence.voicerec=false \
-    persist.audio.fluence.speaker=true \
-    audio.offload.video=true \
-    tunnel.audio.encode = true \
-    audio.offload.buffer.size.kb=32 \
-    av.offload.enable=true \
-    audio.offload.gapless.enabled=true
+    ro.config.vc_call_vol_steps=7
 
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -24,7 +13,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     camera.disable_zsl_mode=true \
-    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera,org.lineageos.snap
+    vendor.camera.aux.packagelist=org.codeaurora.snapcam,com.android.camera
 
 # CNE and DPM
 PRODUCT_PROPERTY_OVERRIDES += \
