@@ -32,8 +32,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:system/etc/audio_policy_configuration.xml
 
 # Custom Doze
-PRODUCT_PACKAGES += \
-    CustomDoze
+# PRODUCT_PACKAGES += \
+#    CustomDoze
 
 # Common init scripts
 PRODUCT_PACKAGES += \
