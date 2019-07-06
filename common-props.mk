@@ -9,7 +9,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     vendor.bluetooth.soc=cherokee \
-    ro.bluetooth.remote.autoconnect=true
+    ro.bluetooth.remote.autoconnect=true \
+    persist.vendor.btstack.enable.splita2dp=true \
+    persist.vendor.btstack.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -43,7 +45,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.disable_backpressure=1 \
     debug.sf.enable_hwc_vds=1 \
     sdm.debug.disable_inline_rotator=1 \
-    sdm.debug.disable_inline_rotator_secure=1
+    sdm.debug.disable_inline_rotator_secure=1 \
+    ro.colorpick_adjust=true
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -91,6 +94,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.ssr.enable_ramdumps=0 \
     persist.vendor.ssr.restart_level=ALL_ENABLE
+
+# Set maximum supported adapter voltage
+    persist.chg.max_volt_mv=9000
+
+# Set cutoff voltage to 3400mV
+    ro.cutoff_voltage_mv=3400
 
 # TimeService
 PRODUCT_PROPERTY_OVERRIDES += \
